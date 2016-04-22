@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#button1").click(function (evt) {
+                var files = $("#file1").get(0).files;
+                if (files.length > 0) {
+                    var data = new FormData();
+                    for (i = 0; i < files.length; i++) {
+                        data.append("file" + i, files[i]);
+                    }
+                    $.ajax({
+                        type: "POST",
+                        url: "/api/mpp2xml",
+                        contentType: false,
+                        processData: false,
+                        data: data,
+                        success: function (xmlString) {
+                            var displayString = String(xmlString).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+                            $("#xml1").html(displayString);
+                        },
+                        error: function () {
+                            alert("Error while invoking the Web API");
+                        }
+                    });
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div>
+        <form>
+            <span>Select file(s) to upload :</span>
+            <input id="file1" name="file1" type="file" />
+            <input id="button1" type="button" value="Upload" />
+        </form>
+    </div>
+    <div id="xml1">
+    </div>
+</body>
+</html>
