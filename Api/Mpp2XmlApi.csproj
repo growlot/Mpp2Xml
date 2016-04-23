@@ -281,7 +281,6 @@
     <Content Include="App_Data\MPXJ\IKVM.Runtime.dll" />
     <Content Include="App_Data\MPXJ\IKVM.Runtime.JNI.dll" />
     <Content Include="App_Data\MPXJ\mpxj-for-csharp.dll" />
-    <Content Include="App_Data\MPXJ\mpxj.dll" />
     <Content Include="App_Data\MPXJ\poi-3.12-20150511.dll" />
     <Content Include="App_Data\MPXJ\rtfparserkit-1.6.0.dll" />
     <Content Include="favicon.ico" />
@@ -320,7 +319,6 @@
     <Content Include="App_Data\MPXJ\mpxj-gac-uninstall.bat" />
     <Content Include="App_Data\MPXJ\mpxj-register-assemblies.bat" />
     <Content Include="App_Data\MPXJ\mpxj-unregister-assemblies.bat" />
-    <Content Include="App_Data\MPXJ\mpxj.tlb" />
     <Content Include="App_Data\MPXJ\poi-3.12-20150511.tlb" />
     <Content Include="App_Data\MPXJ\rtfparserkit-1.6.0.tlb" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
